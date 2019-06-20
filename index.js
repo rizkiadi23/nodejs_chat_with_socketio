@@ -8,7 +8,7 @@ server.listen(port, () => {
 })
 
 app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/public')
+  res.sendFile(__dirname + '/public/index.html')
 })
 
 io.on('connection', (socket) => {
@@ -16,5 +16,11 @@ io.on('connection', (socket) => {
   socket.emit('message', { rizki: 'hey how are you?' })
   socket.on('another event', (data) => {
     console.log(data)
+  })
+
+  socket.on('disconnect', () => {
+    console.log('user disconnected')
+
+    io.emit()
   })
 })
