@@ -1,0 +1,11 @@
+{
+  "name": "nodejs_real_time_app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon ./index.js --exec babel-node -e js"
+  },
+  "author": "",
+  "license": "ISC"
+}
